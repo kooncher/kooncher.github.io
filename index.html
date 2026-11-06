@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>แว่นคุง · ข่าว AI ประจำวัน</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #0f2a30; color: #fff7e6; line-height: 1.6; }
+  main { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
+  h1 { color: #f2b705; margin: 0 0 8px; }
+  a { color: #f2b705; }
+  .box { background: #12343b; border: 3px solid #f2b705; border-radius: 16px; padding: 16px; margin-top: 24px; word-break: break-all; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ข่าวสาร AI ประจำวันกับแว่นคุง</h1>
+  <p>ช่อง TikTok สรุปข่าว AI สั้นๆ ทุกเช้า</p>
+  <div class="box" id="login" hidden>
+    <strong>เชื่อมต่อ TikTok สำเร็จ</strong><br>
+    คัดลอกที่อยู่เว็บทั้งหมดจากแถบด้านบนของเบราว์เซอร์ แล้ววางกลับไปในโปรแกรม <code>tiktok_auth.py</code>
+  </div>
+  <p><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></p>
+</main>
+<script>
+  // TikTok sends people back here after login with ?code=...; just tell them what to do next
+  if (new URLSearchParams(location.search).has("code")) document.getElementById("login").hidden = false;
+</script>
+</body>
+</html>
